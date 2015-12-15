@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.1" data-basepath=".." data-revision="Tue Nov 03 2015 17:34:12 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.1" data-basepath=".." data-revision="Tue Dec 15 2015 22:27:30 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -259,31 +259,31 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="dict/dict.html">
-            
-                
-                    <a href="../dict/dict.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.2.</b>
-                        
-                        系统词典
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="dict/user.html">
+        <li class="chapter " data-level="3.2" data-path="dict/user.html">
             
                 
                     <a href="../dict/user.html">
                 
                         <i class="fa fa-check"></i>
                         
+                            <b>3.2.</b>
+                        
+                        词典格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="dict/dict.html">
+            
+                
+                    <a href="../dict/dict.html">
+                
+                        <i class="fa fa-check"></i>
+                        
                             <b>3.3.</b>
                         
-                        用户词典
+                        系统词典与用户词典
                     </a>
             
             
@@ -537,20 +537,20 @@
 mixseg = worker()
 
 <span class="hljs-comment">##  &#x76F8;&#x5F53;&#x4E8E;&#xFF1A;</span>
-<span class="hljs-comment">##       worker( type = &quot;mix&quot;, dict = &quot;inst/dict/jieba.dict.utf8&quot;,</span>
-<span class="hljs-comment">##               hmm  = &quot;inst/dict/hmm_model.utf8&quot;,  ### HMM&#x6A21;&#x578B;&#x6570;&#x636E;</span>
-<span class="hljs-comment">##               user = &quot;inst/dict/user.dict.utf8&quot;) ### &#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x8BCD;&#x5E93;</span>
+<span class="hljs-comment">##       worker( type = &quot;mix&quot;, dict = &quot;somepath/dict/jieba.dict.utf8&quot;,</span>
+<span class="hljs-comment">##               hmm  = &quot;somepath/dict/hmm_model.utf8&quot;,  ### HMM&#x6A21;&#x578B;&#x6570;&#x636E;</span>
+<span class="hljs-comment">##               user = &quot;somepath/dict/user.dict.utf8&quot;) ### &#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x8BCD;&#x5E93;</span>
 
-mixseg &lt;= <span class="hljs-string">&quot;&#x6C5F;&#x5DDE;&#x5E02;&#x957F;&#x6C5F;&#x5927;&#x6865;&#x53C2;&#x52A0;&#x4E86;&#x957F;&#x6C5F;&#x5927;&#x6865;&#x7684;&#x901A;&#x8F66;&#x4EEA;&#x5F0F;&quot;</span>  <span class="hljs-comment">### &lt;= &#x5206;&#x8BCD;&#x8FD0;&#x7B97;&#x7B26;</span>
+mixseg[<span class="hljs-string">&quot;&#x6C5F;&#x5DDE;&#x5E02;&#x957F;&#x6C5F;&#x5927;&#x6865;&#x53C2;&#x52A0;&#x4E86;&#x957F;&#x6C5F;&#x5927;&#x6865;&#x7684;&#x901A;&#x8F66;&#x4EEA;&#x5F0F;&quot;</span>]  <span class="hljs-comment">### `&lt;=` &#x6216; `[` &#x4E3A;&#x5206;&#x8BCD;&#x8FD0;&#x7B97;&#x7B26;</span>
 
 <span class="hljs-comment">## &#x76F8;&#x5F53;&#x4E8E; segment( &quot;&#x6C5F;&#x5DDE;&#x5E02;&#x957F;&#x6C5F;&#x5927;&#x6865;&#x53C2;&#x52A0;&#x4E86;&#x957F;&#x6C5F;&#x5927;&#x6865;&#x7684;&#x901A;&#x8F66;&#x4EEA;&#x5F0F;&quot; , mixseg ) </span>
-<span class="hljs-comment">## &#x6216;&#x8005; mixseg[&quot;&#x6C5F;&#x5DDE;&#x5E02;&#x957F;&#x6C5F;&#x5927;&#x6865;&#x53C2;&#x52A0;&#x4E86;&#x957F;&#x6C5F;&#x5927;&#x6865;&#x7684;&#x901A;&#x8F66;&#x4EEA;&#x5F0F;&quot;]</span>
+<span class="hljs-comment">## &#x6216;&#x8005; mixseg &lt;= &quot;&#x6C5F;&#x5DDE;&#x5E02;&#x957F;&#x6C5F;&#x5927;&#x6865;&#x53C2;&#x52A0;&#x4E86;&#x957F;&#x6C5F;&#x5927;&#x6865;&#x7684;&#x901A;&#x8F66;&#x4EEA;&#x5F0F;&quot;</span>
 </code></pre>
 <pre><code class="lang-r">[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;&#x6C5F;&#x5DDE;&quot;</span>     <span class="hljs-string">&quot;&#x5E02;&#x957F;&quot;</span>     <span class="hljs-string">&quot;&#x6C5F;&#x5927;&#x6865;&quot;</span>   <span class="hljs-string">&quot;&#x53C2;&#x52A0;&quot;</span>     <span class="hljs-string">&quot;&#x4E86;&quot;</span>       <span class="hljs-string">&quot;&#x957F;&#x6C5F;&#x5927;&#x6865;&quot;</span>
 [<span class="hljs-number">7</span>] <span class="hljs-string">&quot;&#x7684;&quot;</span>       <span class="hljs-string">&quot;&#x901A;&#x8F66;&quot;</span>     <span class="hljs-string">&quot;&#x4EEA;&#x5F0F;&quot;</span>
 </code></pre>
 <p>&#x652F;&#x6301;&#x5BF9;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5206;&#x8BCD;&#xFF1A;</p>
-<pre><code class="lang-r">mixseg &lt;= <span class="hljs-string">&quot;./temp.dat&quot;</span>  <span class="hljs-comment">### &#x81EA;&#x52A8;&#x5224;&#x65AD;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7F16;&#x7801;&#x6A21;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x5728;&#x540C;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</span>
+<pre><code class="lang-r">mixseg[<span class="hljs-string">&quot;./temp.dat&quot;</span>]  <span class="hljs-comment">### &#x81EA;&#x52A8;&#x5224;&#x65AD;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7F16;&#x7801;&#x6A21;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x5728;&#x540C;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</span>
 
 <span class="hljs-comment">## segment( &quot;./temp.dat&quot; , mixseg )</span>
 </code></pre>
@@ -588,22 +588,174 @@ $hmm
 $user
 [<span class="hljs-number">1</span>] <span class="hljs-string">&quot;dict/test.dict.utf8&quot;</span>
 
-$detect $encoding $symbol $output $write $lines can be reset.
+$detect $encoding $symbol $output $write $lines $bylines can be reset.
 </code></pre>
 <p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;R&#x8BED;&#x8A00;&#x5E38;&#x7528;&#x7684; <code>$</code>&#x7B26;&#x53F7;&#x91CD;&#x8BBE;&#x4E00;&#x4E9B;<code>worker</code>&#x7684;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#xFF0C;&#x5982; <code>WorkerName$symbol = T</code>&#xFF0C;&#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x4FDD;&#x7559;&#x6807;&#x70B9;&#x7B26;&#x53F7;&#x3002;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#x5728;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x5DF2;&#x7ECF;&#x786E;&#x5B9A;&#xFF0C;&#x65E0;&#x6CD5;&#x4FEE;&#x6539;&#xFF0C; &#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>WorkerName$PrivateVarible</code>&#x6765;&#x83B7;&#x5F97;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x3002;</p>
 <pre><code class="lang-r">mixseg$encoding
 
 mixseg$detect = <span class="hljs-literal">F</span>
+
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x5206;&#x884C;&#x8F93;&#x51FA;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5C06;&#x6240;&#x6709;&#x5206;&#x8BCD;&#x6587;&#x672C;&#x8F93;&#x51FA;&#x5728;&#x4E00;&#x884C;&#x3002;</span>
+mixseg$bylines = <span class="hljs-literal">T</span>
 </code></pre>
 <h2 id="%E8%AF%8D%E5%85%B8%E4%BB%8B%E7%BB%8D">&#x8BCD;&#x5178;&#x4ECB;&#x7ECD;</h2>
 <p>&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x8BCD;&#x5E93;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;[&#x6DF1;&#x84DD;&#x8BCD;&#x5E93;&#x8F6C;&#x6362;]&#x6784;&#x5EFA;&#x5206;&#x8BCD;&#x8BCD;&#x5E93;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5730;&#x5C06;&#x641C;&#x72D7;&#x7EC6;&#x80DE;&#x8BCD;&#x5E93;&#x7B49;&#x8F93;&#x5165;&#x6CD5;&#x8BCD;&#x5E93;&#x8F6C;&#x6362;&#x4E3A;jiebaR&#x7684;&#x8BCD;&#x5E93;&#x683C;&#x5F0F;&#x3002;</p>
-<pre><code class="lang-r">show_dictpath()     <span class="hljs-comment">### &#x663E;&#x793A;&#x8BCD;&#x5178;&#x8DEF;&#x5F84;</span>
-edit_dict(<span class="hljs-string">&quot;user&quot;</span>)   <span class="hljs-comment">### &#x7F16;&#x8F91;&#x7528;&#x6237;&#x8BCD;&#x5178;</span>
-?edit_dict()        <span class="hljs-comment">### &#x6253;&#x5F00;&#x5E2E;&#x52A9;&#x7CFB;&#x7EDF;</span>
+<pre><code class="lang-r">show_dictpath()     <span class="hljs-comment">### &#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x8BCD;&#x5178;&#x8DEF;&#x5F84;&#x7684;</span>
 </code></pre>
 <p>&#x7CFB;&#x7EDF;&#x8BCD;&#x5178;&#x5171;&#x6709;&#x4E09;&#x5217;&#xFF0C;&#x7B2C;&#x4E00;&#x5217;&#x4E3A;&#x8BCD;&#x9879;&#xFF0C;&#x7B2C;&#x4E8C;&#x5217;&#x4E3A;&#x8BCD;&#x9891;&#xFF0C;&#x7B2C;&#x4E09;&#x5217;&#x4E3A;&#x8BCD;&#x6027;&#x6807;&#x8BB0;&#x3002;</p>
 <p>&#x7528;&#x6237;&#x8BCD;&#x5178;&#x6709;&#x4E24;&#x5217;&#xFF0C;&#x7B2C;&#x4E00;&#x5217;&#x4E3A;&#x8BCD;&#x9879;&#xFF0C;&#x7B2C;&#x4E8C;&#x5217;&#x4E3A;&#x8BCD;&#x6027;&#x6807;&#x8BB0;&#x3002;&#x7528;&#x6237;&#x8BCD;&#x5E93;&#x9ED8;&#x8BA4;&#x8BCD;&#x9891;&#x4E3A;&#x7CFB;&#x7EDF;&#x8BCD;&#x5E93;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x8BCD;&#x9891;&#xFF0C;&#x5982;&#x9700;&#x81EA;&#x5B9A;&#x4E49;&#x8BCD;&#x9891;&#x7387;&#xFF0C;&#x53EF;&#x5C06;&#x65B0;&#x8BCD;&#x6DFB;&#x52A0;&#x5165;&#x7CFB;&#x7EDF;&#x8BCD;&#x5E93;&#x4E2D;&#x3002;</p>
 <p>&#x8BCD;&#x5178;&#x4E2D;&#x7684;&#x8BCD;&#x6027;&#x6807;&#x8BB0;&#x91C7;&#x7528;ictclas&#x7684;&#x6807;&#x8BB0;&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="%E6%96%B0%E7%89%88%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9">&#x65B0;&#x7248;&#x66F4;&#x65B0;&#x5185;&#x5BB9;</h2>
+<h3 id="v0-5-%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9">v0.5 &#x66F4;&#x65B0;&#x5185;&#x5BB9;</h3>
+<p>&#x4E00;&#x3001; &#x589E;&#x52A0;&#xFF1A;&#x8FC7;&#x6EE4;&#x5206;&#x8BCD;&#x7ED3;&#x679C;&#x7684;&#x65B9;&#x6CD5; <code>filter_segment()</code>&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x5173;&#x952E;&#x8BCD;&#x63D0;&#x53D6;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x505C;&#x6B62;&#x8BCD;&#x529F;&#x80FD;&#x3002;TIPS: &#x6700;&#x65B0;&#x7248;&#x672C; v0.7&#xFF0C;&#x5BF9;&#x4E8E;&#x5206;&#x8BCD; worker &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728; <code>worker()</code> &#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528;&#x505C;&#x6B62;&#x8BCD;&#x5E93;&#x3002;</p>
+<pre><code class="lang-r">cutter = worker()
+result_segment = cutter[<span class="hljs-string">&quot;&#x6211;&#x662F;&#x6D4B;&#x8BD5;&#x6587;&#x672C;&#xFF0C;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x8FC7;&#x6EE4;&#x5206;&#x8BCD;&#x6548;&#x679C;&#x3002;&quot;</span>]
+result_segment
+</code></pre>
+<pre><code class="lang-r">[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;&#x6211;&quot;</span>   <span class="hljs-string">&quot;&#x662F;&quot;</span>   <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span> <span class="hljs-string">&quot;&#x6587;&#x672C;&quot;</span> <span class="hljs-string">&quot;&#x7528;&#x4E8E;&quot;</span> <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span> <span class="hljs-string">&quot;&#x8FC7;&#x6EE4;&quot;</span> <span class="hljs-string">&quot;&#x5206;&#x8BCD;&quot;</span> <span class="hljs-string">&quot;&#x6548;&#x679C;&quot;</span>
+</code></pre>
+<pre><code class="lang-r">filter_words = c(<span class="hljs-string">&quot;&#x6211;&quot;</span>,<span class="hljs-string">&quot;&#x4F60;&quot;</span>,<span class="hljs-string">&quot;&#x5B83;&quot;</span>,<span class="hljs-string">&quot;&#x5927;&#x5BB6;&quot;</span>)
+filter_segment(result_segment,filter_words)
+</code></pre>
+<pre><code class="lang-r">[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;&#x662F;&quot;</span>   <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span> <span class="hljs-string">&quot;&#x6587;&#x672C;&quot;</span> <span class="hljs-string">&quot;&#x7528;&#x4E8E;&quot;</span> <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span> <span class="hljs-string">&quot;&#x8FC7;&#x6EE4;&quot;</span> <span class="hljs-string">&quot;&#x5206;&#x8BCD;&quot;</span> <span class="hljs-string">&quot;&#x6548;&#x679C;&quot;</span>
+</code></pre>
+<p>&#x4E8C;&#x3001; &#x589E;&#x5F3A;&#xFF1A;&#x5206;&#x8BCD;&#x652F;&#x6301; &#x201C;&#x5411;&#x91CF;&#x6587;&#x672C;&#x8F93;&#x5165; =&gt; <code>list</code>&#x8F93;&#x51FA;&#x201D; &#x4E0E; &#x201C;&#x6309;&#x884C;&#x8F93;&#x5165;&#x6587;&#x4EF6; =&gt;  <code>list</code>&#x8F93;&#x51FA;&#x201D; </p>
+<p>&#x901A;&#x8FC7; bylines &#x9009;&#x9879;&#x63A7;&#x5236;&#x662F;&#x5426;&#x6309;&#x884C;&#x8F93;&#x51FA;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>bylines = FALSE</code>&#x3002;</p>
+<pre><code class="lang-r">cutter = worker(bylines = <span class="hljs-literal">TRUE</span>)
+cutter
+</code></pre>
+<pre><code class="lang-r">Worker Type:  Mix Segment
+
+Detect Encoding :  <span class="hljs-literal">TRUE</span>
+Default Encoding:  UTF-<span class="hljs-number">8</span>
+Keep Symbols    :  <span class="hljs-literal">FALSE</span>
+Output Path     :  
+Write File      :  <span class="hljs-literal">TRUE</span>
+By Lines        :  <span class="hljs-literal">TRUE</span>
+Max Read Lines  :  <span class="hljs-number">1e+05</span>
+....
+</code></pre>
+<pre><code class="lang-r">cutter[c(<span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x975E;&#x5E38;&#x7684;&#x597D;&quot;</span>,<span class="hljs-string">&quot;&#x5927;&#x5BB6;&#x597D;&#x624D;&#x662F;&#x771F;&#x7684;&#x597D;&quot;</span>)]
+</code></pre>
+<pre><code class="lang-r">[[<span class="hljs-number">1</span>]]
+[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;&#x8FD9;&#x662F;&quot;</span> <span class="hljs-string">&quot;&#x975E;&#x5E38;&quot;</span> <span class="hljs-string">&quot;&#x7684;&quot;</span>   <span class="hljs-string">&quot;&#x597D;&quot;</span>  
+
+[[<span class="hljs-number">2</span>]]
+[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;&#x5927;&#x5BB6;&quot;</span> <span class="hljs-string">&quot;&#x597D;&quot;</span>   <span class="hljs-string">&quot;&#x624D;&quot;</span>   <span class="hljs-string">&quot;&#x662F;&quot;</span>   <span class="hljs-string">&quot;&#x771F;&#x7684;&quot;</span> <span class="hljs-string">&quot;&#x597D;&quot;</span>
+</code></pre>
+<pre><code class="lang-r">cutter$write = <span class="hljs-literal">FALSE</span>
+
+<span class="hljs-comment"># &#x8F93;&#x5165;&#x6587;&#x4EF6;&#x6587;&#x672C;&#x662F;&#xFF1A;</span>
+<span class="hljs-comment"># &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5206;&#x884C;&#x6D4B;&#x8BD5;&#x6587;&#x672C;</span>
+<span class="hljs-comment"># &#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x5206;&#x884C;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;</span>
+
+cutter[<span class="hljs-string">&quot;files.path&quot;</span>]
+</code></pre>
+<pre><code class="lang-r">[[<span class="hljs-number">1</span>]]
+[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;&#x8FD9;&#x662F;&quot;</span> <span class="hljs-string">&quot;&#x4E00;&#x4E2A;&quot;</span> <span class="hljs-string">&quot;&#x5206;&#x884C;&quot;</span> <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span> <span class="hljs-string">&quot;&#x6587;&#x672C;&quot;</span> 
+
+[[<span class="hljs-number">2</span>]]
+[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;&#x7528;&#x4E8E;&quot;</span> <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span> <span class="hljs-string">&quot;&#x5206;&#x884C;&quot;</span>   <span class="hljs-string">&quot;&#x7684;&quot;</span> <span class="hljs-string">&quot;&#x8F93;&#x51FA;&quot;</span> <span class="hljs-string">&quot;&#x7ED3;&#x679C;&quot;</span>
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-comment"># &#x6309;&#x884C;&#x5199;&#x5165;&#x6587;&#x4EF6;</span>
+cutter$write = <span class="hljs-literal">TRUE</span>
+cutter$bylines = <span class="hljs-literal">TRUE</span>
+</code></pre>
+<p>&#x4E09;&#x3001;&#x589E;&#x52A0;&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>vector_keywords</code> &#x5BF9;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x5411;&#x91CF;&#x63D0;&#x53D6;&#x5173;&#x952E;&#x8BCD;&#x3002;</p>
+<pre><code class="lang-r">keyworker = worker(<span class="hljs-string">&quot;keywords&quot;</span>)
+cutter = worker()
+vector_keywords(cutter[<span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x957F;&#x7684;&#x6D4B;&#x8BD5;&#x6587;&#x672C;&#x3002;&quot;</span>],keyworker)
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-number">8.94485</span> <span class="hljs-number">7.14724</span> <span class="hljs-number">4.77176</span> <span class="hljs-number">4.29163</span> <span class="hljs-number">2.81755</span> 
+ <span class="hljs-string">&quot;&#x6587;&#x672C;&quot;</span>  <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span>  <span class="hljs-string">&quot;&#x6BD4;&#x8F83;&quot;</span>  <span class="hljs-string">&quot;&#x8FD9;&#x662F;&quot;</span>  <span class="hljs-string">&quot;&#x4E00;&#x4E2A;&quot;</span>
+</code></pre>
+<pre><code class="lang-r">vector_keywords(c(<span class="hljs-string">&quot;&#x4ECA;&#x5929;&quot;</span>,<span class="hljs-string">&quot;&#x5929;&#x6C14;&quot;</span>,<span class="hljs-string">&quot;&#x771F;&#x7684;&quot;</span>,<span class="hljs-string">&quot;&#x5341;&#x5206;&quot;</span>,<span class="hljs-string">&quot;&#x4E0D;&#x9519;&quot;</span>,<span class="hljs-string">&quot;&#x7684;&quot;</span>,<span class="hljs-string">&quot;&#x611F;&#x89C9;&quot;</span>),keyworker)
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-number">6.45994</span> <span class="hljs-number">6.18823</span> <span class="hljs-number">5.64148</span> <span class="hljs-number">5.63374</span> <span class="hljs-number">4.99212</span> 
+ <span class="hljs-string">&quot;&#x5929;&#x6C14;&quot;</span>  <span class="hljs-string">&quot;&#x4E0D;&#x9519;&quot;</span>  <span class="hljs-string">&quot;&#x611F;&#x89C9;&quot;</span>  <span class="hljs-string">&quot;&#x771F;&#x7684;&quot;</span>  <span class="hljs-string">&quot;&#x4ECA;&#x5929;&quot;</span>
+</code></pre>
+<p>&#x56DB;&#x3001;&#x589E;&#x52A0;&#xFF1A; <code>write = &quot;NOFILE&quot;</code> &#x9009;&#x9879;&#xFF0C;&#x4E0D;&#x68C0;&#x67E5;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;</p>
+<pre><code class="lang-r">cutter = worker(write = <span class="hljs-string">&quot;NOFILE&quot;</span>,symbol = <span class="hljs-literal">TRUE</span>)
+cutter[<span class="hljs-string">&quot;./test.txt&quot;</span>] <span class="hljs-comment"># &#x76EE;&#x5F55;&#x4E0B;&#x6709;test.txt &#x6587;&#x4EF6;</span>
+</code></pre>
+<pre><code class="lang-r">[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;.&quot;</span>    <span class="hljs-string">&quot;/&quot;</span>    <span class="hljs-string">&quot;test&quot;</span> <span class="hljs-string">&quot;.&quot;</span>    <span class="hljs-string">&quot;txt&quot;</span>
+</code></pre>
+<h3 id="v0-6-%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9">v0.6 &#x66F4;&#x65B0;&#x5185;&#x5BB9;</h3>
+<p>&#x4E00;&#x3001;&#x589E;&#x5F3A;&#xFF1A;&#x5206;&#x8BCD;&#x3001;&#x8BCD;&#x6027;&#x6807;&#x6CE8;&#x65F6;&#xFF0C;&#x589E;&#x52A0;&#x8FC7;&#x6EE4;&#x505C;&#x6B62;&#x8BCD;&#x529F;&#x80FD;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684; <code>STOPPATH</code> &#x8DEF;&#x5F84;&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x505C;&#x6B62;&#x8BCD;&#x5E93;&#x3002;&#x9700;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x5176;&#x4ED6;&#x8DEF;&#x5F84;&#xFF0C;&#x505C;&#x6B62;&#x8BCD;&#x624D;&#x80FD;&#x5728;&#x5206;&#x8BCD;&#x65F6;&#x4F7F;&#x7528;&#x3002;&#x505C;&#x6B62;&#x8BCD;&#x5E93;&#x7684;&#x7F16;&#x7801;&#x9700;&#x8981;&#x4E3A; UTF-8 &#x683C;&#x5F0F;&#xFF0C;&#x5426;&#x5219;&#x8BFB;&#x5165;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x4E3A;&#x4E71;&#x7801;&#x3002;</p>
+<pre><code class="lang-r">cutter = worker()
+cutter
+<span class="hljs-comment"># Worker Type:  Mix Segment</span>
+
+<span class="hljs-comment"># Fixed Model Components:  </span>
+<span class="hljs-comment"># ...</span>
+
+<span class="hljs-comment"># $stop_word</span>
+<span class="hljs-comment"># NULL</span>
+
+<span class="hljs-comment"># $timestamp</span>
+<span class="hljs-comment"># [1] 1442716020</span>
+
+<span class="hljs-comment"># $detect $encoding $symbol $output $write $lines $bylines can be reset</span>
+</code></pre>
+<pre><code class="lang-r">cutter = worker(stop_word=<span class="hljs-string">&quot;../stop.txt&quot;</span>)
+cutter
+<span class="hljs-comment"># Worker Type:  Mix Segment</span>
+
+<span class="hljs-comment"># Fixed Model Components:  </span>
+<span class="hljs-comment"># ...</span>
+
+<span class="hljs-comment"># $stop_word</span>
+<span class="hljs-comment"># [1] &quot;../stop.txt&quot;</span>
+
+<span class="hljs-comment"># $timestamp</span>
+<span class="hljs-comment"># [1] 1442716020</span>
+
+<span class="hljs-comment"># $detect $encoding $symbol $output $write $lines $bylines can be reset.</span>
+</code></pre>
+<p>&#x4E8C;&#x3001;&#x589E;&#x5F3A;&#xFF1A;&#x5206;&#x8BCD;&#x65F6;&#xFF0C;<code>symbol = FALSE</code> &#x65F6;&#xFF0C;<code>2010-10-12</code>&#xFF0C;<code>20.2</code> &#x7C7B;&#x4F3C;&#x683C;&#x5F0F;&#x7684;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x7B26;&#x53F7;&#x4F1A;&#x88AB;&#x4FDD;&#x7559;&#x3002;&#x5355;&#x7EAF;&#x7684;&#x7B26;&#x53F7;&#x5C06;&#x4F1A;&#x88AB;&#x8FC7;&#x6EE4;&#x3002;</p>
+<pre><code class="lang-r">cutter = worker()
+cutter$symbol = <span class="hljs-literal">F</span>
+cutter[<span class="hljs-string">&quot;2010-10-10&quot;</span>]
+</code></pre>
+<p>&#x4E09;&#x3001;&#x589E;&#x52A0;&#xFF1A;<code>freq()</code> &#x8FDB;&#x884C;&#x8BCD;&#x9891;&#x7EDF;&#x8BA1;&#xFF0C;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x4E3A;&#x6587;&#x672C;&#x5411;&#x91CF;&#xFF0C;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x4E3A;&#x6587;&#x672C;&#x9891;&#x7387;&#x7684;&#x6570;&#x636E;&#x6846;&#x3002;</p>
+<pre><code class="lang-r">freq(c(<span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span>, <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span>, <span class="hljs-string">&quot;&#x6587;&#x672C;&quot;</span>))
+</code></pre>
+<p>&#x56DB;&#x3001;&#x589E;&#x5F3A;&#xFF1A;<code>filter_segment()</code> &#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x4EE5;&#x6587;&#x672C;&#x5411;&#x91CF;&#x4E3A;&#x5185;&#x5BB9;&#x7684; list&#x3002;</p>
+<pre><code class="lang-r">cutter = worker()
+result_segment = list(    cutter[<span class="hljs-string">&quot;&#x6211;&#x662F;&#x6D4B;&#x8BD5;&#x6587;&#x672C;&#xFF0C;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x8FC7;&#x6EE4;&#x5206;&#x8BCD;&#x6548;&#x679C;&#x3002;&quot;</span>], 
+                      cutter[<span class="hljs-string">&quot;&#x6211;&#x662F;&#x6D4B;&#x8BD5;&#x6587;&#x672C;&#xFF0C;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x8FC7;&#x6EE4;&#x5206;&#x8BCD;&#x6548;&#x679C;&#x3002;&quot;</span>])
+result_segment
+filter_words  = c(<span class="hljs-string">&quot;&#x6211;&quot;</span>,<span class="hljs-string">&quot;&#x4F60;&quot;</span>,<span class="hljs-string">&quot;&#x5B83;&quot;</span>,<span class="hljs-string">&quot;&#x5927;&#x5BB6;&quot;</span>)
+filter_segment(result_segment,filter_words)
+</code></pre>
+<p>&#x4E94;&#x3001;&#x589E;&#x52A0;&#xFF1A;<code>filter_segment()</code> &#x589E;&#x52A0;<code>unit</code> &#x9009;&#x9879;&#x3002;</p>
+<p>&#x5904;&#x7406;&#x6587;&#x672C;&#x65F6;&#xFF0C;&#x505C;&#x6B62;&#x8BCD;&#x6570;&#x91CF;&#x8F83;&#x591A;&#x65F6; &#xFF0C;&#x751F;&#x6210;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8D85;&#x8FC7; 265 bytes &#xFF0C;R &#x53EF;&#x80FD;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x901A;&#x8FC7; <code>unit</code> &#x9009;&#x9879;&#x53EF;&#x4EE5;&#x5BF9;&#x4E8E;&#x8F83;&#x591A;&#x7684;&#x505C;&#x6B62;&#x8BCD;&#x5206;&#x591A;&#x6B21;&#x5904;&#x7406;&#xFF0C;&#x63A7;&#x5236;&#x6BCF;&#x6B21;&#x8BC6;&#x522B;&#x7684;&#x505C;&#x6B62;&#x8BCD;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x63A7;&#x5236;&#x751F;&#x6210;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x957F;&#x5EA6;&#x3002;<code>unit</code> &#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 50&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539; unit &#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</p>
+<pre><code class="lang-r">help(regex)
+
+Long regular expressions may or may not be accepted: the POSIX standard only requires up to <span class="hljs-number">256</span> bytes.
+
+filter_segment(result_segment,filter_words) <span class="hljs-comment"># &#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x3002;</span>
+
+filter_segment(result_segment,filter_words, unit=<span class="hljs-number">10</span>) <span class="hljs-comment"># &#x5982;&#x679C;&#x4F60;&#x6709;&#x8F83;&#x591A;&#x6587;&#x672C;&#x957F;&#x5EA6;&#x5F88;&#x957F;&#x7684;&#x505C;&#x6B62;&#x8BCD;&#x8BCD;&#x6761;</span>
+</code></pre>
+<h3 id="v0-7-%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9">v0.7 &#x66F4;&#x65B0;&#x5185;&#x5BB9;</h3>
+<p>&#x4E00;&#x3001;&#x589E;&#x52A0;&#xFF1A;get_tuple() &#x8FD4;&#x56DE;&#x5206;&#x8BCD;&#x7ED3;&#x679C;&#x4E2D; n &#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7EC4;&#x5408;&#x7684;&#x9891;&#x7387;&#x60C5;&#x51B5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x8BCD;&#x5178;&#x7684;&#x53C2;&#x8003;&#x3002;</p>
+<pre><code class="lang-r">get_tuple(c(<span class="hljs-string">&quot;sd&quot;</span>,<span class="hljs-string">&quot;sd&quot;</span>,<span class="hljs-string">&quot;sd&quot;</span>,<span class="hljs-string">&quot;rd&quot;</span>),size=<span class="hljs-number">3</span>)
+<span class="hljs-comment">#     name count</span>
+<span class="hljs-comment"># 4   sdsd     2</span>
+<span class="hljs-comment"># 1   sdrd     1</span>
+<span class="hljs-comment"># 2 sdsdrd     1</span>
+<span class="hljs-comment"># 3 sdsdsd     1</span>
+get_tuple(list(
+        c(<span class="hljs-string">&quot;sd&quot;</span>,<span class="hljs-string">&quot;sd&quot;</span>,<span class="hljs-string">&quot;sd&quot;</span>,<span class="hljs-string">&quot;rd&quot;</span>),
+        c(<span class="hljs-string">&quot;&#x65B0;&#x6D6A;&quot;</span>,<span class="hljs-string">&quot;&#x5FAE;&#x535A;&quot;</span>,<span class="hljs-string">&quot;sd&quot;</span>,<span class="hljs-string">&quot;rd&quot;</span>),
+    ), size = <span class="hljs-number">2</span>)
+<span class="hljs-comment">#       name count</span>
+<span class="hljs-comment"># 2     sdrd     2</span>
+<span class="hljs-comment"># 3     sdsd     2</span>
+<span class="hljs-comment"># 1   &#x5FAE;&#x535A;sd     1</span>
+<span class="hljs-comment"># 4 &#x65B0;&#x6D6A;&#x5FAE;&#x535A;     1</span>
+</code></pre>
 
                     
                     </section>
@@ -631,6 +783,10 @@ edit_dict(<span class="hljs-string">&quot;user&quot;</span>)   <span class="hljs
 
     
     <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

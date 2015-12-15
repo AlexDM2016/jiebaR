@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.4" data-basepath=".." data-revision="Tue Nov 03 2015 17:34:12 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.4" data-basepath=".." data-revision="Tue Dec 15 2015 22:27:30 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -259,31 +259,31 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="dict/dict.html">
-            
-                
-                    <a href="../dict/dict.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.2.</b>
-                        
-                        系统词典
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="dict/user.html">
+        <li class="chapter " data-level="3.2" data-path="dict/user.html">
             
                 
                     <a href="../dict/user.html">
                 
                         <i class="fa fa-check"></i>
                         
+                            <b>3.2.</b>
+                        
+                        词典格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="dict/dict.html">
+            
+                
+                    <a href="../dict/dict.html">
+                
+                        <i class="fa fa-check"></i>
+                        
                             <b>3.3.</b>
                         
-                        用户词典
+                        系统词典与用户词典
                     </a>
             
             
@@ -557,6 +557,50 @@ $rhs
    <span class="hljs-number">22.3853</span>    <span class="hljs-number">8.69667</span> 
 <span class="hljs-string">&quot;&#x957F;&#x6C5F;&#x5927;&#x6865;&quot;</span>     <span class="hljs-string">&quot;&#x6C5F;&#x5DDE;&quot;</span>
 </code></pre>
+<h2 id="v0-7-%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9">v0.7 &#x66F4;&#x65B0;&#x5185;&#x5BB9;</h2>
+<p>&#x4E00;&#x3001;&#x589E;&#x52A0;&#xFF1A;get_idf() &#x6839;&#x636E;&#x591A;&#x6587;&#x6863;&#x8BCD;&#x6761;&#x7ED3;&#x679C;&#x8BA1;&#x7B97; IDF &#x503C;&#x3002;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x6587;&#x672C;&#x5411;&#x91CF;&#x7684; list,&#x6BCF;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x5411;&#x91CF;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#xFF0C;&#x53EF;&#x81EA;&#x5B9A;&#x4E49;&#x505C;&#x6B62;&#x8BCD;&#x5217;&#x8868;&#x3002; </p>
+<pre><code class="lang-r">get_idf(a_big_list,<span class="hljs-keyword">stop</span>=<span class="hljs-string">&quot;&#x505C;&#x6B62;&#x8BCD;&#x5217;&#x8868;&quot;</span>,path=<span class="hljs-string">&quot;&#x8F93;&#x51FA;IDF&#x76EE;&#x5F55;&quot;</span>)
+</code></pre>
+<p>&#x4E8C;&#x3001;&#x589E;&#x52A0;&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>vector_simhash</code>  <code>vector_distance</code> &#x76F4;&#x63A5;&#x5BF9;&#x6587;&#x672C;&#x5411;&#x91CF;&#x8BA1;&#x7B97; simhash &#x548C; &#x6D77;&#x660E;&#x8DDD;&#x79BB;&#x3002;</p>
+<pre><code class="lang-r">sim = worker(<span class="hljs-string">&quot;simhash&quot;</span>)
+cutter = worker()
+vector_simhash(cutter[<span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x957F;&#x7684;&#x6D4B;&#x8BD5;&#x6587;&#x672C;&#x3002;&quot;</span>],sim)
+</code></pre>
+<pre><code class="lang-r">$simhash
+[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;9679845206667243434&quot;</span>
+
+$keyword
+<span class="hljs-number">8.94485</span> <span class="hljs-number">7.14724</span> <span class="hljs-number">4.77176</span> <span class="hljs-number">4.29163</span> <span class="hljs-number">2.81755</span> 
+ <span class="hljs-string">&quot;&#x6587;&#x672C;&quot;</span>  <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&quot;</span>  <span class="hljs-string">&quot;&#x6BD4;&#x8F83;&quot;</span>  <span class="hljs-string">&quot;&#x8FD9;&#x662F;&quot;</span>  <span class="hljs-string">&quot;&#x4E00;&#x4E2A;&quot;</span>
+</code></pre>
+<pre><code class="lang-r">vector_simhash(c(<span class="hljs-string">&quot;&#x4ECA;&#x5929;&quot;</span>,<span class="hljs-string">&quot;&#x5929;&#x6C14;&quot;</span>,<span class="hljs-string">&quot;&#x771F;&#x7684;&quot;</span>,<span class="hljs-string">&quot;&#x5341;&#x5206;&quot;</span>,<span class="hljs-string">&quot;&#x4E0D;&#x9519;&quot;</span>,<span class="hljs-string">&quot;&#x7684;&quot;</span>,<span class="hljs-string">&quot;&#x611F;&#x89C9;&quot;</span>),sim)
+</code></pre>
+<pre><code class="lang-r">$simhash
+[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;13133893567857586837&quot;</span>
+
+$keyword
+<span class="hljs-number">6.45994</span> <span class="hljs-number">6.18823</span> <span class="hljs-number">5.64148</span> <span class="hljs-number">5.63374</span> <span class="hljs-number">4.99212</span> 
+ <span class="hljs-string">&quot;&#x5929;&#x6C14;&quot;</span>  <span class="hljs-string">&quot;&#x4E0D;&#x9519;&quot;</span>  <span class="hljs-string">&quot;&#x611F;&#x89C9;&quot;</span>  <span class="hljs-string">&quot;&#x771F;&#x7684;&quot;</span>  <span class="hljs-string">&quot;&#x4ECA;&#x5929;&quot;</span>
+</code></pre>
+<pre><code class="lang-r">vector_distance(c(<span class="hljs-string">&quot;&#x4ECA;&#x5929;&quot;</span>,<span class="hljs-string">&quot;&#x5929;&#x6C14;&quot;</span>,<span class="hljs-string">&quot;&#x771F;&#x7684;&quot;</span>,<span class="hljs-string">&quot;&#x5341;&#x5206;&quot;</span>,<span class="hljs-string">&quot;&#x4E0D;&#x9519;&quot;</span>,<span class="hljs-string">&quot;&#x7684;&quot;</span>,<span class="hljs-string">&quot;&#x611F;&#x89C9;&quot;</span>),c(<span class="hljs-string">&quot;&#x4ECA;&#x5929;&quot;</span>,<span class="hljs-string">&quot;&#x5929;&#x6C14;&quot;</span>,<span class="hljs-string">&quot;&#x771F;&#x7684;&quot;</span>,<span class="hljs-string">&quot;&#x5341;&#x5206;&quot;</span>,<span class="hljs-string">&quot;&#x4E0D;&#x9519;&quot;</span>,<span class="hljs-string">&quot;&#x7684;&quot;</span>,<span class="hljs-string">&quot;&#x611F;&#x89C9;&quot;</span>),sim)
+</code></pre>
+<pre><code class="lang-r">$distance
+[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;0&quot;</span>
+
+$lhs
+<span class="hljs-number">6.45994</span> <span class="hljs-number">6.18823</span> <span class="hljs-number">5.64148</span> <span class="hljs-number">5.63374</span> <span class="hljs-number">4.99212</span> 
+ <span class="hljs-string">&quot;&#x5929;&#x6C14;&quot;</span>  <span class="hljs-string">&quot;&#x4E0D;&#x9519;&quot;</span>  <span class="hljs-string">&quot;&#x611F;&#x89C9;&quot;</span>  <span class="hljs-string">&quot;&#x771F;&#x7684;&quot;</span>  <span class="hljs-string">&quot;&#x4ECA;&#x5929;&quot;</span> 
+
+$rhs
+<span class="hljs-number">6.45994</span> <span class="hljs-number">6.18823</span> <span class="hljs-number">5.64148</span> <span class="hljs-number">5.63374</span> <span class="hljs-number">4.99212</span> 
+ <span class="hljs-string">&quot;&#x5929;&#x6C14;&quot;</span>  <span class="hljs-string">&quot;&#x4E0D;&#x9519;&quot;</span>  <span class="hljs-string">&quot;&#x611F;&#x89C9;&quot;</span>  <span class="hljs-string">&quot;&#x771F;&#x7684;&quot;</span>  <span class="hljs-string">&quot;&#x4ECA;&#x5929;&quot;</span>
+</code></pre>
+<p>&#x4E09;&#x3001;&#x589E;&#x52A0;&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>tobin</code> &#x8FDB;&#x884C; simhash &#x6570;&#x503C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x3002;</p>
+<pre><code class="lang-r">res = vector_simhash(c(<span class="hljs-string">&quot;&#x4ECA;&#x5929;&quot;</span>,<span class="hljs-string">&quot;&#x5929;&#x6C14;&quot;</span>,<span class="hljs-string">&quot;&#x771F;&#x7684;&quot;</span>,<span class="hljs-string">&quot;&#x5341;&#x5206;&quot;</span>,<span class="hljs-string">&quot;&#x4E0D;&#x9519;&quot;</span>,<span class="hljs-string">&quot;&#x7684;&quot;</span>,<span class="hljs-string">&quot;&#x611F;&#x89C9;&quot;</span>),sim) 
+tobin(res$simhash)
+</code></pre>
+<pre><code class="lang-r">[<span class="hljs-number">1</span>] <span class="hljs-string">&quot;0000000000000000000000000000000000010101111100000111001010010101&quot;</span>
+</code></pre>
 
                     
                     </section>
@@ -584,6 +628,10 @@ $rhs
 
     
     <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
