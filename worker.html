@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Introduction | jiebaR 中文分词  </title>
+        <title>初始化选项 | jiebaR 中文分词  </title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Linux : Build Status　Mac : Build Status　Win : Build status">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
         
         
@@ -37,8 +37,10 @@
         
     
     
-    <link rel="next" href="./intro.html" />
+    <link rel="next" href="./dict.html" />
     
+    
+    <link rel="prev" href="./sim.html" />
     
 
         
@@ -47,9 +49,9 @@
         
         
     <div class="book"
-        data-level="0"
-        data-chapter-title="Introduction"
-        data-filepath="README.md"
+        data-level="7"
+        data-chapter-title="初始化选项"
+        data-filepath="worker.md"
         data-basepath="."
         data-revision="Mon Feb 15 2016 12:00:28 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
@@ -67,7 +69,7 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -170,7 +172,7 @@
             
         </li>
     
-        <li class="chapter " data-level="7" data-path="worker.html">
+        <li class="chapter active" data-level="7" data-path="worker.html">
             
                 
                     <a href="./worker.html">
@@ -329,25 +331,45 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="jiebar-&#x4E2D;&#x6587;&#x5206;&#x8BCD;--">jiebaR &#x4E2D;&#x6587;&#x5206;&#x8BCD;  <a href="http://dx.doi.org/10.5281/zenodo.13729" target="_blank"><img src="https://zenodo.org/badge/8525/qinwf/jiebaR.svg" alt=""></a></h1>
-<p>Linux : <a href="https://travis-ci.org/qinwf/jiebaR" target="_blank"><img src="https://travis-ci.org/qinwf/jiebaR.svg?branch=master" alt="Build Status"></a>&#x3000;Mac : <a href="https://travis-ci.org/qinwf/jiebaR" target="_blank"><img src="https://travis-ci.org/qinwf/jiebaR.svg?branch=osx" alt="Build Status"></a>&#x3000;Win : <a href="https://ci.appveyor.com/project/qinwf53234/jiebar/branch/master" target="_blank"><img src="https://ci.appveyor.com/api/projects/status/k8swxpkue1caiiwi/branch/master?svg=true" alt="Build status"></a></p>
-<p><a href="https://github.com/fxsjy/jieba" target="_blank">&quot;&#x7ED3;&#x5DF4;&quot;&#x4E2D;&#x6587;&#x5206;&#x8BCD;</a>&#x7684;R&#x8BED;&#x8A00;&#x7248;&#x672C;&#xFF0C;&#x652F;&#x6301;&#x6700;&#x5927;&#x6982;&#x7387;&#x6CD5;&#xFF08;Maximum Probability&#xFF09;&#xFF0C;&#x9690;&#x5F0F;&#x9A6C;&#x5C14;&#x79D1;&#x592B;&#x6A21;&#x578B;&#xFF08;Hidden Markov Model&#xFF09;&#xFF0C;&#x7D22;&#x5F15;&#x6A21;&#x578B;&#xFF08;QuerySegment&#xFF09;&#xFF0C;&#x6DF7;&#x5408;&#x6A21;&#x578B;&#xFF08;MixSegment&#xFF09;&#xFF0C;&#x5171;&#x56DB;&#x79CD;&#x5206;&#x8BCD;&#x6A21;&#x5F0F;&#xFF0C;&#x540C;&#x65F6;&#x6709;&#x8BCD;&#x6027;&#x6807;&#x6CE8;&#xFF0C;&#x5173;&#x952E;&#x8BCD;&#x63D0;&#x53D6;&#xFF0C;&#x6587;&#x672C;Simhash&#x76F8;&#x4F3C;&#x5EA6;&#x6BD4;&#x8F83;&#x7B49;&#x529F;&#x80FD;&#x3002;&#x9879;&#x76EE;&#x4F7F;&#x7528;&#x4E86;<a href="https://github.com/RcppCore/Rcpp" target="_blank">Rcpp</a>&#x548C;<a href="https://github.com/aszxqw/cppjieba" target="_blank">CppJieba</a>&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x3002;</p>
-<p>&#x4F7F;&#x7528;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#xFF1A;</p>
-<ul>
-<li>&#x5728;&#x672C;&#x6587;&#x6863;&#x5185;&#x8BC4;&#x8BBA;</li>
-<li>&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x81F3;&#x7528;&#x6237;&#x90AE;&#x4EF6;&#x5217;&#x8868;&#x3000;<a href="mailto:jiebaR@googlegroups.com" target="_blank">jiebaR@googlegroups.com</a></li>
-<li>&#x8BBF;&#x95EE;&#x3000;<a href="https://groups.google.com/d/forum/jiebaR" target="_blank">https://groups.google.com/d/forum/jiebaR</a></li>
-<li>&#x5728; <a href="https://github.com/qinwf/jiebaR" target="_blank">GitHub</a> &#x63D0;&#x4EA4; issues&#x3002;&#x3000;</li>
-</ul>
-<p><iframe id="forum_embed" src="javascript:void(0)" scrolling="no" frameborder="0" width="900" height="500">
-</iframe></p>
-<script type="text/javascript">
-  document.getElementById('forum_embed').src =
-     'https://groups.google.com/forum/embed/?place=forum/jiebar'
-     + '&showsearch=false&showpopout=false&showtabs=false&hideforumtitle=true'
-     + '&parenturl=' + encodeURIComponent(window.location.href);
-</script>
-
+                        <h2 id="worker">worker()</h2>
+<p><code>worker()</code> &#x7528;&#x4E8E;&#x65B0;&#x5EFA;&#x5206;&#x8BCD;&#x5F15;&#x64CE;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x65B0;&#x5EFA;&#x591A;&#x4E2A;&#x5206;&#x8BCD;&#x5F15;&#x64CE;&#x3002;&#x5F15;&#x64CE;&#x7684;&#x7C7B;&#x578B;&#x6709;&#xFF1A; mix&#xFF08;&#x6DF7;&#x5408;&#x6A21;&#x578B;&#xFF09;, mp&#xFF08;&#x6700;&#x5927;&#x6982;&#x7387;&#x6A21;&#x578B;&#xFF09;, hmm&#xFF08;HMM&#x6A21;&#x578B;&#xFF09;, query&#xFF08;&#x7D22;&#x5F15;&#x6A21;&#x578B;&#xFF09;, tag&#xFF08;&#x6807;&#x8BB0;&#x6A21;&#x578B;&#xFF09;, simhash&#xFF08;Simhash &#x6A21;&#x578B;&#xFF09;&#x548C; keywords&#xFF08;&#x5173;&#x952E;&#x8BCD;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x5171;7&#x79CD;&#x3002;</p>
+<h2 id="&#x9ED8;&#x8BA4;&#x53C2;&#x6570;">&#x9ED8;&#x8BA4;&#x53C2;&#x6570;</h2>
+<pre><code class="lang-r">worker(type = <span class="hljs-string">&quot;mix&quot;</span>, dict = DICTPATH, hmm = HMMPATH, user = USERPATH,
+  idf = IDFPATH, stop_word = STOPPATH, write = <span class="hljs-literal">T</span>, qmax = <span class="hljs-number">20</span>, topn = <span class="hljs-number">5</span>,
+  encoding = <span class="hljs-string">&quot;UTF-8&quot;</span>, detect = <span class="hljs-literal">T</span>, symbol = <span class="hljs-literal">F</span>, lines = <span class="hljs-number">1e+05</span>,
+  output = <span class="hljs-literal">NULL</span>, bylines = <span class="hljs-literal">F</span>)
+</code></pre>
+<h2 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h2>
+<h4 id="type-&#x5F15;&#x64CE;&#x7C7B;&#x578B;">type &#x5F15;&#x64CE;&#x7C7B;&#x578B;</h4>
+<p>&#x5F15;&#x64CE;&#x7684;&#x7C7B;&#x578B;&#x6709;&#xFF1A; mix&#xFF08;&#x6DF7;&#x5408;&#x6A21;&#x578B;&#xFF09;, mp&#xFF08;&#x6700;&#x5927;&#x6982;&#x7387;&#x6A21;&#x578B;&#xFF09;, hmm&#xFF08;HMM&#x6A21;&#x578B;&#xFF09;, query&#xFF08;&#x7D22;&#x5F15;&#x6A21;&#x578B;&#xFF09;, tag&#xFF08;&#x6807;&#x8BB0;&#x6A21;&#x578B;&#xFF09;, simhash&#xFF08;Simhash &#x6A21;&#x578B;&#xFF09;&#x548C; keywords&#xFF08;&#x5173;&#x952E;&#x8BCD;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x5171;7&#x79CD;&#x3002;</p>
+<h4 id="dict-&#x7CFB;&#x7EDF;&#x8BCD;&#x5178;">dict &#x7CFB;&#x7EDF;&#x8BCD;&#x5178;</h4>
+<p>&#x4F18;&#x5148;&#x8F7D;&#x5165;&#x7684;&#x8BCD;&#x5178;&#xFF0C;&#x5305;&#x62EC;&#x8BCD;&#x3001;&#x8BCD;&#x9891;&#x3001;&#x8BCD;&#x6027;&#x6807;&#x8BB0;&#x4E09;&#x5217;&#x3002;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x81EA;&#x5B9A;&#x4E49;&#x8DEF;&#x5F84;&#x3002;</p>
+<h4 id="hmm-hmm&#x6A21;&#x578B;&#x8DEF;&#x5F84;">hmm HMM&#x6A21;&#x578B;&#x8DEF;&#x5F84;</h4>
+<p>HMM&#x6A21;&#x578B;&#x8DEF;&#x5F84;</p>
+<h4 id="user-&#x7528;&#x6237;&#x8BCD;&#x5178;">user &#x7528;&#x6237;&#x8BCD;&#x5178;</h4>
+<p>&#x7528;&#x6237;&#x8BCD;&#x5178;&#xFF0C;&#x5305;&#x62EC;&#x8BCD;&#x3001;&#x8BCD;&#x6027;&#x6807;&#x8BB0;&#x4E24;&#x5217;&#x3002;&#x7528;&#x6237;&#x8BCD;&#x5178;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8BCD;&#x7684;&#x8BCD;&#x9891;&#x5747;&#x4E3A;&#x7CFB;&#x7EDF;&#x8BCD;&#x5178;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x8BCD;&#x9891;&#x3002;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x81EA;&#x5B9A;&#x4E49;&#x8DEF;&#x5F84;&#x3002;</p>
+<h4 id="idf-idf&#x8BCD;&#x5178;">idf IDF&#x8BCD;&#x5178;</h4>
+<p>IDF &#x8BCD;&#x5178;&#xFF0C;&#x5173;&#x952E;&#x8BCD;&#x63D0;&#x53D6;&#x4F7F;&#x7528;&#x3002;</p>
+<h4 id="stopword-&#x5173;&#x952E;&#x8BCD;&#x7528;&#x505C;&#x6B62;&#x8BCD;&#x5E93;">stop_word &#x5173;&#x952E;&#x8BCD;&#x7528;&#x505C;&#x6B62;&#x8BCD;&#x5E93;</h4>
+<p>&#x5173;&#x952E;&#x8BCD;&#x63D0;&#x53D6;&#x4F7F;&#x7528;&#x7684;&#x505C;&#x6B62;&#x8BCD;&#x5E93;&#x3002;</p>
+<h4 id="write-&#x5199;&#x5165;&#x6587;&#x4EF6;">write &#x5199;&#x5165;&#x6587;&#x4EF6;</h4>
+<p>&#x662F;&#x5426;&#x5C06;&#x6587;&#x4EF6;&#x5206;&#x8BCD;&#x7ED3;&#x679C;&#x5199;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x5426;&#x3002;&#x53EA;&#x5728;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x4E3A;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x65F6;&#xFF0C;&#x672C;&#x53C2;&#x6570;&#x624D;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#x3002;&#x672C;&#x53C2;&#x6570;&#x53EA;&#x5BF9;&#x5206;&#x8BCD;&#x548C;&#x8BCD;&#x6027;&#x6807;&#x6CE8;&#x6709;&#x6548;&#x3002;</p>
+<h4 id="qmax-&#x6700;&#x5927;&#x7D22;&#x5F15;&#x957F;&#x5EA6;">qmax &#x6700;&#x5927;&#x7D22;&#x5F15;&#x957F;&#x5EA6;</h4>
+<p>&#x7D22;&#x5F15;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x6700;&#x5927;&#x53EF;&#x80FD;&#x6210;&#x8BCD;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x3002;</p>
+<h4 id="topn-&#x5173;&#x952E;&#x8BCD;&#x6570;">topn &#x5173;&#x952E;&#x8BCD;&#x6570;</h4>
+<p>&#x63D0;&#x53D6;&#x7684;&#x5173;&#x952E;&#x8BCD;&#x6570;&#x3002;</p>
+<h4 id="encoding-&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7F16;&#x7801;">encoding &#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7F16;&#x7801;</h4>
+<p>&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;UTF-8&#x3002;</p>
+<h4 id="detect-&#x68C0;&#x6D4B;&#x7F16;&#x7801;">detect &#x68C0;&#x6D4B;&#x7F16;&#x7801;</h4>
+<p>&#x662F;&#x5426;&#x68C0;&#x67E5;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x9ED8;&#x8BA4;&#x68C0;&#x67E5;&#x3002;</p>
+<h4 id="symbol-&#x4FDD;&#x7559;&#x7B26;&#x53F7;">symbol &#x4FDD;&#x7559;&#x7B26;&#x53F7;</h4>
+<p>&#x662F;&#x5426;&#x4FDD;&#x7559;&#x7B26;&#x53F7;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x4FDD;&#x7559;&#x7B26;&#x53F7;&#x3002;</p>
+<h4 id="lines-&#x8BFB;&#x53D6;&#x884C;&#x6570;">lines &#x8BFB;&#x53D6;&#x884C;&#x6570;</h4>
+<p>&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x5927;&#x884C;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x5BF9;&#x4E8E;&#x5927;&#x6587;&#x4EF6;&#xFF0C;&#x5B9E;&#x73B0;&#x5206;&#x6B21;&#x8BFB;&#x53D6;&#x3002;</p>
+<h4 id="output-&#x8F93;&#x51FA;&#x8DEF;&#x5F84;">output &#x8F93;&#x51FA;&#x8DEF;&#x5F84;</h4>
+<p>&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x8DEF;&#x5F84;&#xFF0C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8DEF;&#x5F84;&#x3002;&#x53EA;&#x5728;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x4E3A;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x65F6;&#xFF0C;&#x672C;&#x53C2;&#x6570;&#x624D;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#x3002;</p>
+<h4 id="bylines-&#x6309;&#x884C;&#x8F93;&#x51FA;">bylines &#x6309;&#x884C;&#x8F93;&#x51FA;</h4>
+<p>&#x6587;&#x4EF6;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x6309;&#x884C;&#x8F93;&#x51FA;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x5219;&#x5C06;&#x8BFB;&#x5165;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#x5411;&#x91CF;&#x6309;&#x884C;&#x9010;&#x4E2A;&#x8FDB;&#x884C;&#x5206;&#x8BCD;&#x64CD;&#x4F5C;&#x3002;</p>
 
                     
                     </section>
@@ -358,8 +380,10 @@
         </div>
 
         
+        <a href="./sim.html" class="navigation navigation-prev " aria-label="Previous page: Simhash 与 海明距离"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 简介"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="./dict.html" class="navigation navigation-next " aria-label="Next page: 词典格式"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
