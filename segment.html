@@ -1,284 +1,306 @@
 <!DOCTYPE HTML>
-<html lang="en" >
-    
+<html lang="" >
     <head>
-        
+        <title>分词 · jiebaR 中文分词</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>分词 | jiebaR 中文分词  </title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="description" content="jiebaR提供了四种分词模式，可以通过worker()来初始化分词引擎，使用segment()进行分词。">
+        <meta name="generator" content="GitBook 3.0.0-pre.5">
         
         
-        <meta name="HandheldFriendly" content="true"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
         
+    
     <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-disqus/plugin.css">
+    
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+    
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
-        
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
-        
-    
     
 
         
     
     
-    <link rel="next" href="./tagger.html" />
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tagger.html" />
     
     
-    <link rel="prev" href="./install.html" />
+    <link rel="prev" href="install.html" />
     
 
-        
     </head>
     <body>
         
-        
-    <div class="book"
-        data-level="3"
-        data-chapter-title="分词"
-        data-filepath="segment.md"
-        data-basepath="."
-        data-revision="Fri Mar 18 2016 08:17:55 GMT+0800 (中国标准时间)"
-        data-innerlanguage="">
+<div class="book"
+    data-level="3"
+    data-chapter-title="分词"
+    data-filepath="segment.md"
+    data-basepath="."
+    data-revision="Sun Apr 24 2016 16:30:48 GMT+0800 (中国标准时间)"
+    data-innerlanguage="">
     
 
 <div class="book-summary">
+    
     <nav role="navigation">
         <ul class="summary">
             
             
-            
-            
 
             
 
+
+            
             
     
-        <li class="chapter " data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="./">
             
-                
-                    <a href="./index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                        Introduction
-                    </a>
+                <a href="./">
             
+                    
+                    Introduction
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter " data-level="1" data-path="intro.html">
             
-                
-                    <a href="./intro.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.</b>
-                        
-                        简介
-                    </a>
+                <a href="intro.html">
             
+                    
+                        <b>1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter " data-level="2" data-path="install.html">
             
-                
-                    <a href="./install.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.</b>
-                        
-                        安装
-                    </a>
+                <a href="install.html">
             
+                    
+                        <b>2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter active" data-level="3" data-path="segment.html">
             
-                
-                    <a href="./segment.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                        分词
-                    </a>
+                <a href="segment.html">
             
+                    
+                        <b>3.</b>
+                    
+                    分词
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter " data-level="4" data-path="tagger.html">
             
-                
-                    <a href="./tagger.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.</b>
-                        
-                        词性标记
-                    </a>
+                <a href="tagger.html">
             
+                    
+                        <b>4.</b>
+                    
+                    词性标记
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter " data-level="5" data-path="keywords.html">
             
-                
-                    <a href="./keywords.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.</b>
-                        
-                        关键词提取
-                    </a>
+                <a href="keywords.html">
             
+                    
+                        <b>5.</b>
+                    
+                    关键词提取
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter " data-level="6" data-path="sim.html">
             
-                
-                    <a href="./sim.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.</b>
-                        
-                        Simhash 与 海明距离
-                    </a>
+                <a href="sim.html">
             
+                    
+                        <b>6.</b>
+                    
+                    Simhash 与 海明距离
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter " data-level="7" data-path="worker.html">
             
-                
-                    <a href="./worker.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        初始化选项
-                    </a>
+                <a href="worker.html">
             
+                    
+                        <b>7.</b>
+                    
+                    初始化选项
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter " data-level="8" data-path="dict.html">
             
-                
-                    <a href="./dict.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.</b>
-                        
-                        词典格式
-                    </a>
+                <a href="dict.html">
             
+                    
+                        <b>8.</b>
+                    
+                    词典格式
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter " data-level="9" data-path="cidian.html">
             
-                
-                    <a href="./cidian.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>9.</b>
-                        
-                        cidian 包
-                    </a>
+                <a href="cidian.html">
             
+                    
+                        <b>9.</b>
+                    
+                    cidian 包
+            
+                </a>
+            
+
             
         </li>
     
-        <li class="chapter " data-level="10" data-path="faq/index.html">
+        <li class="chapter " data-level="10" >
             
-                
-                    <a href="./faq/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.</b>
-                        
-                        常见问题
-                    </a>
+                <span>
             
+                    
+                        <b>10.</b>
+                    
+                    常见问题
+            
+                </span>
+            
+
             
             <ul class="articles">
                 
     
         <li class="chapter " data-level="10.1" data-path="faq/tm.html">
             
-                
-                    <a href="./faq/tm.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.1.</b>
-                        
-                        关于tm包
-                    </a>
+                <a href="faq/tm.html">
             
+                    
+                        <b>10.1.</b>
+                    
+                    关于tm包
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter " data-level="10.2" data-path="faq/s2t.html">
             
-                
-                    <a href="./faq/s2t.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.2.</b>
-                        
-                        繁简转换
-                    </a>
+                <a href="faq/s2t.html">
             
+                    
+                        <b>10.2.</b>
+                    
+                    繁简转换
+            
+                </a>
+            
+
             
         </li>
     
         <li class="chapter " data-level="10.3" data-path="faq/warnings.html">
             
-                
-                    <a href="./faq/warnings.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.3.</b>
-                        
-                        警告信息
-                    </a>
+                <a href="faq/warnings.html">
             
+                    
+                        <b>10.3.</b>
+                    
+                    警告信息
+            
+                </a>
+            
+
             
         </li>
     
@@ -289,53 +311,55 @@
     
         <li class="chapter " data-level="11" data-path="v0.7.html">
             
-                
-                    <a href="./v0.7.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>11.</b>
-                        
-                        旧版本文档
-                    </a>
+                <a href="v0.7.html">
             
+                    
+                        <b>11.</b>
+                    
+                    旧版本文档
+            
+                </a>
+            
+
             
         </li>
     
 
-
-            
             <li class="divider"></li>
+            
+
             <li>
                 <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
                     Published with GitBook
                 </a>
             </li>
-            
         </ul>
     </nav>
+    
 </div>
 
     <div class="book-body">
-        <div class="body-inner">
-            <div class="book-header" role="navigation">
-    <!-- Actions Left -->
+        
+            <div class="body-inner">
+                
+                    
+<div class="book-header" role="navigation">
     
 
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >jiebaR 中文分词  </a>
+        <a href="." >分词</a>
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1" role="main">
-                <div class="page-inner">
-                
-                
-                    <section class="normal" id="section-">
-                    
-                        <h2 id="&#x5206;&#x8BCD;">&#x5206;&#x8BCD;</h2>
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <section class="normal markdown-section">
+                            
+                            <h2 id="&#x5206;&#x8BCD;">&#x5206;&#x8BCD;</h2>
 <p>jiebaR&#x63D0;&#x4F9B;&#x4E86;&#x56DB;&#x79CD;&#x5206;&#x8BCD;&#x6A21;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>worker()</code>&#x6765;&#x521D;&#x59CB;&#x5316;&#x5206;&#x8BCD;&#x5F15;&#x64CE;&#xFF0C;&#x4F7F;&#x7528;<code>segment()</code>&#x8FDB;&#x884C;&#x5206;&#x8BCD;&#x3002;</p>
 <pre><code class="lang-r"><span class="hljs-comment">##  &#x63A5;&#x53D7;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#xFF0C;&#x5EFA;&#x7ACB;&#x5206;&#x8BCD;&#x5F15;&#x64CE; </span>
 mixseg = worker()
@@ -560,62 +584,77 @@ get_tuple(list(
 <span class="hljs-comment"># 4 &#x65B0;&#x6D6A;&#x5FAE;&#x535A;     1</span>
 </code></pre>
 
-                    
-                    </section>
+                            
+                            </section>
+                        </div>
+                    </div>
                 
-                
-                </div>
             </div>
-        </div>
 
-        
-        <a href="./install.html" class="navigation navigation-prev " aria-label="Previous page: 安装"><i class="fa fa-angle-left"></i></a>
-        
-        
-        <a href="./tagger.html" class="navigation navigation-next " aria-label="Next page: 词性标记"><i class="fa fa-angle-right"></i></a>
+            
+                
+                <a href="install.html" class="navigation navigation-prev " aria-label="Previous page: 安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tagger.html" class="navigation navigation-next " aria-label="Next page: 词性标记">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
         
     </div>
 </div>
 
         
-<script src="gitbook/app.js"></script>
-
+    <script src="gitbook/app.js"></script>
     
-    <script src="gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
-    
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
-    
-
-<script>
-require(["gitbook"], function(gitbook) {
-    var config = {"ga":{"token":"UA-58841928-1","configuration":"auto"},"disqus":{"shortName":"qinwenfeng","useIdentifier":false},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
-    gitbook.start(config);
-});
-</script>
-
         
-    </body>
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
     
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fanjian/fanjian.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fanjian/mcqx.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+    <script>
+    require(["gitbook"], function(gitbook) {
+        gitbook.start({"ga":{"token":"UA-58841928-1","configuration":"auto"},"disqus":{"shortName":"qinwenfeng","useIdentifier":false},"fanjian":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}}});
+    });
+    </script>
+
+    </body>
 </html>
