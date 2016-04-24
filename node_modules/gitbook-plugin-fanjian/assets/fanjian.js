@@ -1,5 +1,5 @@
 var defaultEncoding = 2;
-var translateDelay = 0;
+var translateDelay = 100;
 var msgToTraditionalChinese = "繁简";	// 簡轉繁時所顯示的文字
 var msgToSimplifiedChinese = "繁简"; 	// 繁转简时所显示的文字
 var translateButtonId = "toolbar-delete";	// 「轉換」<A>鏈接標籤ID

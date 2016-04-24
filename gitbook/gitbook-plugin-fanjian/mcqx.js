@@ -18,7 +18,7 @@ require(["gitbook", "jquery"], function(gitbook, $) {
 //                                        );
 //                
 //            };
-    $(document).ready(function() {
+    gitbook.events.bind("page.change",function() {
         if(!$('.toolbar-delete').length)
             gitbook.toolbar.createButton({
                 position: 'left',
